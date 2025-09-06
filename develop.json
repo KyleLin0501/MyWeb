@@ -1,29 +1,29 @@
-[
-  {
-    "href": "https://www.your-company-website-1.com",
-    "ariaLabel": "公司 A 的專案",
-    "imageSrc": "static/img/company_logo_a.png",
-    "imageAlt": "公司 A Logo",
-    "title": "公司 A - 後端系統開發",
-    "date": "2022 年 1 月 - 2023 年 3 月",
-    "description": "負責開發和維護高效能的 RESTful API，並與前端團隊緊密合作，優化用戶體驗。"
-  },
-  {
-    "href": "https://www.your-company-website-2.com",
-    "ariaLabel": "公司 B 的專案",
-    "imageSrc": "static/img/company_logo_b.png",
-    "imageAlt": "公司 B Logo",
-    "title": "公司 B - 行動應用程式開發",
-    "date": "2023 年 4 月 - 2024 年 6 月",
-    "description": "使用 React Native 開發跨平台行動應用程式，從需求分析到上架 App Store/Google Play。"
-  },
-  {
-    "href": "https://www.your-company-website-3.com",
-    "ariaLabel": "公司 C 的專案",
-    "imageSrc": "static/img/company_logo_c.png",
-    "imageAlt": "公司 C Logo",
-    "title": "公司 C - 數據分析平台",
-    "date": "2024 年 7 月 - 至今",
-    "description": "建立基於 Python 的數據處理管道，並使用 Tableau 製作互動式儀表板。"
-  }
-]
+//[
+//  {
+//    "href": "https://swesg.com/",
+//    "ariaLabel": "永續世界管理顧問股份有限公司",
+//    "imageSrc": "static/img/永續世界管理顧問股份有限公司.png",
+//    "imageAlt": "永續世界管理顧問股份有限公司 Logo",
+//    "title": "永續世界管理顧問股份有限公司 全端開發",
+//    "date": "2025 年 1 月 - now",
+//    "description": "獨立開發和維護全端系統，前端介面設計，優化用戶體驗。"
+//  },
+//  {
+//    "href": "https://www.your-company-website-2.com",
+//    "ariaLabel": "公司 B 的專案",
+//    "imageSrc": "static/img/company_logo_b.png",
+//    "imageAlt": "公司 B Logo",
+//    "title": "公司 B - 行動應用程式開發",
+//    "date": "2023 年 4 月 - 2024 年 6 月",
+//    "description": "使用 React Native 開發跨平台行動應用程式，從需求分析到上架 App Store/Google Play。"
+//  },
+//  {
+//    "href": "https://www.your-company-website-3.com",
+//    "ariaLabel": "公司 C 的專案",
+//    "imageSrc": "static/img/company_logo_c.png",
+//    "imageAlt": "公司 C Logo",
+//    "title": "公司 C - 數據分析平台",
+//    "date": "2024 年 7 月 - 至今",
+//    "description": "建立基於 Python 的數據處理管道，並使用 Tableau 製作互動式儀表板。"
+//  }
+//]

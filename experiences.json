@@ -1,0 +1,66 @@
+[
+  {
+    "href": "#",
+    "ariaLabel": "2025 iPlayground Staff",
+    "imageSrc": "static/img/2025iPlayground.JPG",
+    "imageAlt": "2025iPlayground",
+    "title": "2025 iPlayground 工作人員",
+    "date": "2025 年 8 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2025 海峽兩岸青少年創客大賽",
+    "imageSrc": "static/img/2025海峽兩岸創客大賽.JPG",
+    "imageAlt": "2025人文科技跨域創新實踐競賽",
+    "title": "2025 海峽兩岸青少年創客大賽 三等獎",
+    "date": "2025 年 7 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2025 人文與科技跨域創新實踐競賽",
+    "imageSrc": "static/img/2025人文科技跨域創新實踐競賽.JPG",
+    "imageAlt": "2025人文科技跨域創新實踐競賽",
+    "title": "2025 人文與科技跨域創新實踐競賽 二等獎",
+    "date": "2025 年 6 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2024 MAIC 行動應用創新賽大中華區",
+    "imageSrc": "static/img/2024MAIC大中華區決賽.JPG",
+    "imageAlt": "2024MAIC大中華區決賽",
+    "title": "2024 MAIC 行動應用創新賽 大中華區 二等獎",
+    "date": "2024 年 11 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2024 MAIC 行動應用創新賽台灣區",
+    "imageSrc": "static/img/2024MAIC台灣決賽.jpg",
+    "imageAlt": "2024MAIC台灣決賽",
+    "title": "2024 MAIC 行動應用創新賽 台灣 一等獎",
+    "date": "2024 年 7 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2024 Swift Student Challenge",
+    "imageSrc": "static/img/SSC2024_picture.JPG",
+    "imageAlt": "SSC2024_picture",
+    "title": "2024 Swift Student Challenge Winner",
+    "date": "2024 年 3 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "2024 全國電子設計創意競賽",
+    "imageSrc": "static/img/全國電子設計創意競賽2024.jpg",
+    "imageAlt": "全國電子設計創意競賽2024",
+    "title": "2024 全國電子設計創意競賽 冠軍",
+    "date": "2024 年 3 月"
+  },
+  {
+    "href": "#",
+    "ariaLabel": "App 行動應用創新賽",
+    "imageSrc": "static/img/2023App行動應用創新賽.JPG",
+    "imageAlt": "2023App行動應用創新賽",
+    "title": "2023 App 行動應用創新賽 三等獎",
+    "date": "2023 年 8 月"
+  }
+]

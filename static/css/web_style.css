@@ -1,102 +1,82 @@
-/* base.html */
+/* Reset & 字體 */
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-header {
-    width: 100%;
-    z-index: 999;
-    /*height: 113px;*/
-    top: 10px;
+    margin: 0;
+    padding: 0;
 }
 
-nav .navbar {
+/* Navbar 外層 (固定置頂 + 置中) */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: transparent;
+}
+
+/* Navbar 內容 */
+.navbar-custom {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
 }
 
-nav .container {
-    z-index: 1000;
+.navbar-nav {
+    margin: 0 auto;
 }
 
-nav .navbar-nav {
-    --bs-scroll-height: 400px;
-}
-
-nav  .navbar-bg {
-    background: linear-gradient(155deg, rgba(241, 238, 238, 0.6), rgba(255, 250, 250, 0.15));  /* 灰色漸層背景 */
-    color: white !important;
-    border-radius: 50px;
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    backdrop-filter: blur(10px);  /* 毛玻璃模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
-}
-
-nav .bg_blur {
-    background: rgba(255, 255, 255, 50%);
-}
-
-nav .navbar-toggler:focus {
-    box-shadow: none;
-}
-
-nav .navbar-toggler i {
-    color: white;
-    border: 0px;
-}
-
-nav .category {
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
     color: #000000;
-    margin-left: 5px;
-    margin-right: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-nav .category-container {
-    display: flex;
+.nav-item {
+    padding: 0 4px;
 }
 
-nav .category-container:hover a {
-    background: linear-gradient(155deg, rgba(161, 161, 161, 0.8), rgba(90, 90, 90, 0.5));  /* 灰色漸層背景 */
-    /*color: white !important;*/
-    border-radius: 50px;
-    backdrop-filter: blur(10px);  /* 毛玻璃模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
-    color: black;
-    animation: ease-in-out 2s;
+.nav-link:hover {
+    background: linear-gradient(155deg, rgba(161, 161, 161, 0.8), rgba(90, 90, 90, 0.5));
+    color: black !important;
+    backdrop-filter: blur(10px);
 }
 
-nav .category-container.active a {
-    background: rgba(0, 0, 0, 0.3);  /* 半透明背景 */
+.nav-link.active {
+    background: rgba(0, 0, 0, 0.3);
     color: white !important;
-    border-radius: 50px;
-    backdrop-filter: blur(10px);  /* 毛玻璃模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
+    backdrop-filter: blur(10px);
 }
 
-footer .footer-line {
-    border: 0;
-    height: 1px;
-    background-color: #777777;
-    margin: 20px 0;
+/* Section 顯示/隱藏 */
+section {
+    display: none;
+    min-height: 100vh;
+    padding-top: 100px; /* 預留 navbar 高度 */
 }
 
-@media (max-width: 991px) {
-    max-width :960px;
+section.active {
+    display: block;
 }
 
-@media (min-width: 768px) {
-    max-width :720px;
+/* 首頁容器 */
+.section-index .home-container {
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
 }
-
- /* index.html */
-
 
 .section-index .bg-black {
     background-color: black;
- }
+}
 
 .section-index .image-container {
     position: relative;
@@ -105,15 +85,172 @@ footer .footer-line {
     align-items: center;
 }
 
-#scrollImage {
+.section-index #scrollImage {
     width: 100%;
     height: auto;
-    max-height: 90vh; /* 限制最大高度 */
+    max-height: 90vh;
     object-fit: cover;
-    transform: scale(1); /* 初始大小 */
-    transition: transform 0.4s ease-out; /* 平滑縮放效果 */
+    transform: scale(1);
+    transition: transform 0.4s ease-out;
 }
 
 .section-index .color-white {
     color: #FFFFFF;
+}
+
+/* Experience 區塊 */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 卡片可點擊外層 */
+.experience-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 卡片樣式 */
+.experience-card {
+    display: flex;
+    align-items: stretch; /* 子元素高度一致 */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(15, 15, 15, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    cursor: pointer;
+}
+
+/* hover 效果 */
+.experience-card-link:focus .experience-card,
+.experience-card-link:hover .experience-card {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(15, 15, 15, 0.12);
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* 圖片區塊 */
+.experience-image {
+    flex: 0 0 48%;
+    max-width: 48%;
+    height: 100%;
+    overflow: hidden;
+    background: #eee;
+}
+
+.experience-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 內容區塊 */
+.experience-content {
+    flex: 1;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-content h4 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    color: #111;
+}
+
+.experience-content .muted {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 手機版 RWD：圖片在上方，固定卡片高度，圖片占滿上方 */
+@media (max-width: 767.98px) {
+    .experience-card {
+        flex-direction: column;
+        width: 100%;           /* 卡片滿版 */
+        /* height: 300px; */ /* 移除固定卡片高度，讓內容決定 */
+        margin: 0;             /* 清除左右空白 */
+        overflow: hidden;      /* 避免圖片超出卡片 */
+        position: relative;
+    }
+
+    .experience-image {
+        min-width: 100%;
+        /* height: 60%; */ /* 移除高度百分比，讓它根據 aspect-ratio 或內容決定 */
+        padding-top: 40%; /* 設置圖片區塊寬高比為 16:9 (100% / (16/9) = 56.25%) */
+        position: relative;
+        overflow: hidden;
+        background: #eee; /* 如果圖片載入失敗，顯示背景色 */
+    }
+
+    .experience-image img {
+        position: absolute; /* 絕對定位填滿父容器 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;          /* 拉滿圖片區塊 */
+        object-fit: cover;     /* 保持比例，超出部分裁切 */
+        display: block;
+    }
+
+    .experience-content {
+        width: 100%;
+        /* height: 40%; */ /* 移除高度百分比 */
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* 桌面版：圖片區塊固定比例，卡片自適應內容 */
+@media (min-width: 768px) {
+    .experience-card {
+        flex-direction: row;
+        height: auto;        /* 卡片高度跟內容自適應 */
+    }
+
+    .experience-image {
+        flex: 0 0 48%;
+        max-width: 48%;
+        aspect-ratio: 16 / 9; /* 圖片區塊固定比例 */
+        overflow: hidden;     /* 多餘部分裁掉 */
+    }
+
+    .experience-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .experience-content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .experience-content h4 {
+        font-size: 1.3rem !important;
+    }
+}
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f8f8f8;
 }
