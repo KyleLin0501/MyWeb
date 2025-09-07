@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const experienceListContainer = document.querySelector('.experience-list-grid');
+  const experienceListContainer = document.querySelector('.develop-list-grid');
 
   if (!experienceListContainer) {
-    console.error('Container for experience list not found.');
+    console.error('Container for develop list not found.');
     return;
   }
 
@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         cardLink.setAttribute('target', '_blank');
         cardLink.setAttribute('rel', 'noopener noreferrer');
 
-        const cardHtml = `
+        // 移除多餘的 cardHtml 變數，直接賦值給 innerHTML
+        cardLink.innerHTML = `
             <div class="experience-card">
                 <div class="experience-image">
                     <img src="placeholder.png" data-src="${item.imageSrc}" alt="${item.imageAlt}" loading="lazy">
@@ -34,9 +35,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         `;
-        cardLink.innerHTML = cardHtml;
         experienceListContainer.appendChild(cardLink);
       });
+
+      // 新增的程式碼：處理圖片延遲載入
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const src = img.getAttribute('data-src');
+            if (src) {
+              img.src = src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img); // 載入後停止觀察
+          }
+        });
+      });
+
+      lazyImages.forEach(img => observer.observe(img));
     })
     .catch(error => {
       console.error('There was a problem fetching the data:', error);
