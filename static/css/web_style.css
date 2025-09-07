@@ -51,7 +51,7 @@ body {
 }
 
 .nav-link.active {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     color: white !important;
     backdrop-filter: blur(10px);
 }
@@ -110,7 +110,17 @@ section.active {
     .section-index h5 {
         font-size: 1rem;
     }
+    .section-index .image-container .d-flex {
+        flex-direction: column;
+        align-items: center; /* 讓圖片在手機版居中 */
+    }
+
+    /* 調整圖片在手機版的寬度，確保它們是 100% 寬 */
+    .section-index .image-container .d-flex .w-50 {
+        width: 100% !important;
+    }
 }
+
 
 /* Experience 區塊 */
 .section-experience .experience-list {
