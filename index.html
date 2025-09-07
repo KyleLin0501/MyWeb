@@ -3,32 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <!-- 自訂 CSS -->
     <link rel="stylesheet" href="static/css/web_style.css">
     <title>Kyle 工作站</title>
 </head>
 <body>
 
-<!-- Navbar (固定最上方) -->
 <div class="navbar-wrapper">
     <nav class="navbar navbar-expand navbar-custom">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#home" data-target="home">首頁</a></li>
-            <li class="nav-item"><a class="nav-link" href="#develop" data-target="develop">開發經歷</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experience" data-target="experience">活動與競賽</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about" data-target="about">關於我</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+            <li class="nav-item"><a class="nav-link" href="#develop">開發經歷</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">活動與競賽</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
         </ul>
     </nav>
 </div>
 
-<!-- Sections -->
 <section id="home" class="active section-index">
     <div class="container py-5 home-container">
         <h3>Hello, I'm</h3>
@@ -91,30 +85,14 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <div class="container">
         <p>Copyright © 2025 LIN KAI YU</p>
     </div>
 </footer>
 
-<!-- Scripts -->
-<script>
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            // 移除所有 active
-            document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
-            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-            // 設定當前 active
-            this.classList.add('active');
-            document.getElementById(this.dataset.target).classList.add('active');
-            // 捲到頂部
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    });
-</script>
 <script src="static/js/develop.js"></script>
 <script src="static/js/experiences.js"></script>
+<script src="static/js/base.js"></script>
 </body>
 </html>

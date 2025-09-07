@@ -1,3 +1,4 @@
+// 整合所有 JavaScript 邏輯到一個區塊，這樣更容易管理
 document.addEventListener('DOMContentLoaded', function () {
   // 核心功能：根據 URL 錨點設定導覽列和區塊的 active 狀態
   function setActiveSection() {
@@ -44,7 +45,4 @@ document.addEventListener('DOMContentLoaded', function () {
     { threshold: 0.15 },
   );
   cards.forEach((card) => observer.observe(card));
-
-  // 移除多餘的卡片點擊事件監聽器
-  // 讓瀏覽器原生處理 href 導航，這樣重新整理時才能保留區塊
 });
