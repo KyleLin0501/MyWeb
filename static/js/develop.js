@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardHtml = `
             <div class="experience-card">
                 <div class="experience-image">
-                    <img src="${item.imageSrc}" alt="${item.imageAlt}">
+                    <img src="placeholder.png" data-src="${item.imageSrc}" alt="${item.imageAlt}" loading="lazy">
                 </div>
                 <div class="experience-content">
                     <h4>${item.title}</h4>
