@@ -58,22 +58,15 @@ body {
 
 /* Section 隱藏/顯示的修正 */
 section {
-    position: absolute; /* 將所有區塊重疊，但它們仍然佔據空間 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0; /* 讓區塊透明 */
-    visibility: hidden; /* 讓區塊不可見 */
+    display: none; /* 預設完全不佔據空間 */
     min-height: 100vh;
-    padding-top: 100px;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    padding-top: 100px; /* 預留 navbar 高度 */
 }
 
 section.active {
-    position: static; /* 讓活躍區塊回到正常文檔流，佔據其應有的空間 */
-    opacity: 1; /* 讓區塊可見 */
-    visibility: visible;
+    display: block; /* 只有活躍的區塊才會顯示 */
 }
+
 /* 首頁容器 */
 .section-index .home-container {
     position: relative;

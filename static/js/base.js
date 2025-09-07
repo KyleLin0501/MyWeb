@@ -24,11 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
+
       if (targetElement) {
+        // 先將所有 section 設為非活躍，確保頁面佈局清空
+        document.querySelectorAll('section').forEach(section => {
+          section.classList.remove('active');
+        });
+
+        // 再將目標 section 設為活躍，讓頁面高度調整
+        targetElement.classList.add('active');
+
+        // 最後，再執行滾動指令
         targetElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+
+        // 更新 URL 錨點
         window.location.hash = targetId;
       }
     });
