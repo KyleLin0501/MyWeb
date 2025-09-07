@@ -1,20 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Navigation active state logic
-  let currentPath = window.location.pathname.split('/')[1]; // Get the first path segment
-  console.log('currentPath:', currentPath); // Debugging
+  // 核心功能：根據 URL 錨點設定導覽列和區塊的 active 狀態
+  function setActiveSection() {
+    // 取得 URL 的錨點，如果沒有則預設為 #home
+    const currentHash = window.location.hash || '#home';
 
-  document.querySelectorAll('.category-container a').forEach((link) => {
-    let linkPath = new URL(link.href, window.location.origin).pathname.split(
-      '/',
-    )[1]; // Get the first path segment of the full link URL
-    console.log('linkPath:', linkPath); // Debugging
+    // 移除所有 .nav-link 和 section 的 active 狀態
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+    });
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.remove('active');
+    });
 
-    if (linkPath === currentPath) {
-      link.parentElement.classList.add('active');
+    // 根據錨點設定對應的 nav-link 和 section 為 active
+    const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
+    const activeSection = document.querySelector(currentHash);
+
+    if (activeLink) {
+      activeLink.classList.add('active');
     }
-  });
+    if (activeSection) {
+      activeSection.classList.add('active');
+    }
+  }
 
-  // IntersectionObserver animation for cards
+  // 監聽 URL 錨點變化事件，確保點擊內部連結時也能正確更新 active 狀態
+  window.addEventListener('hashchange', setActiveSection);
+
+  // 頁面載入時執行一次，處理初始狀態
+  setActiveSection();
+
+  // IntersectionObserver 動畫效果
   const cards = document.querySelectorAll('.experience-card');
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -29,16 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   cards.forEach((card) => observer.observe(card));
 
-  // Click event listener for cards to handle navigation
-  const links = document.querySelectorAll('.experience-card-link');
-  links.forEach(link => {
-    link.addEventListener('click', function() {
-      const url = this.getAttribute('data-href');
-      if (url) {
-        window.location.href = url;
-      }
-    });
-  });
+  // 移除多餘的卡片點擊事件監聽器
+  // 讓瀏覽器原生處理 href 導航，這樣重新整理時才能保留區塊
 });
-
-
