@@ -56,17 +56,24 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* Section 顯示/隱藏 */
+/* Section 隱藏/顯示的修正 */
 section {
-    display: none;
+    position: absolute; /* 將所有區塊重疊，但它們仍然佔據空間 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* 讓區塊透明 */
+    visibility: hidden; /* 讓區塊不可見 */
     min-height: 100vh;
-    padding-top: 100px; /* 預留 navbar 高度 */
+    padding-top: 100px;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 section.active {
-    display: block;
+    position: static; /* 讓活躍區塊回到正常文檔流，佔據其應有的空間 */
+    opacity: 1; /* 讓區塊可見 */
+    visibility: visible;
 }
-
 /* 首頁容器 */
 .section-index .home-container {
     position: relative;
@@ -103,6 +110,12 @@ section.active {
         position: relative;
         min-height: 80% !important;
         z-index: 1;
+    }
+    .section-index h3 {
+        font-size: 1.5rem;
+    }
+    .section-index h5 {
+        font-size: 1rem;
     }
 }
 

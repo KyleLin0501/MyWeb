@@ -1,22 +1,15 @@
-// 整合所有 JavaScript 邏輯到一個區塊，這樣更容易管理
 document.addEventListener('DOMContentLoaded', function () {
   // 核心功能：根據 URL 錨點設定導覽列和區塊的 active 狀態
   function setActiveSection() {
-    // 取得 URL 的錨點，如果沒有則預設為 #home
     const currentHash = window.location.hash || '#home';
-
-    // 移除所有 .nav-link 和 section 的 active 狀態
     document.querySelectorAll('.nav-link').forEach(link => {
       link.classList.remove('active');
     });
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('active');
     });
-
-    // 根據錨點設定對應的 nav-link 和 section 為 active
     const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
     const activeSection = document.querySelector(currentHash);
-
     if (activeLink) {
       activeLink.classList.add('active');
     }
@@ -25,10 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // 監聽 URL 錨點變化事件，確保點擊內部連結時也能正確更新 active 狀態
-  window.addEventListener('hashchange', setActiveSection);
+  // 新增：點擊導覽列連結時，精確捲動到區塊頂部
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        window.location.hash = targetId;
+      }
+    });
+  });
 
-  // 頁面載入時執行一次，處理初始狀態
+  // 監聽 URL 錨點變化事件
+  window.addEventListener('hashchange', setActiveSection);
   setActiveSection();
 
   // IntersectionObserver 動畫效果
