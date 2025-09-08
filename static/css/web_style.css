@@ -473,6 +473,7 @@ section.active {
 .section-about .skill-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(15, 15, 15, 0.12);
+    cursor: default;
 }
 
 /* 內容區塊 */
