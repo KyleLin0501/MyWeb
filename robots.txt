@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kylelin0501.github.io/MyWeb/sitemap.xml
