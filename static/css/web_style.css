@@ -376,6 +376,60 @@ section.active {
         object-fit: contain; /* 確保 Logo 完整顯示，不會裁切或變形 */
     }
 }
+
+/* --- 關於我區塊樣式 --- */
+.section-about .profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.section-about .about-content h4 {
+    font-weight: 600;
+}
+
+.section-about .about-content ul {
+    padding-left: 20px;
+}
+
+/* 技能標籤樣式 */
+.section-about .skills-list .badge {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* 社群連結樣式 */
+.section-about .social-links {
+    gap: 20px;
+}
+
+.section-about .social-link {
+    color: #333;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.section-about .social-link:hover {
+    color: #007bff;
+}
+
+.section-about .qrcode-img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
 /* Footer */
 footer {
     padding: 20px 0;
