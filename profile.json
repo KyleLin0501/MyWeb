@@ -1,8 +1,9 @@
 {
   "about": {
-    "name": "Lin Kai Yu 楷祐",
+    "name": "Kyle 楷祐",
     "title": "逢甲大學 資訊工程學系 四年級",
-    "bio": " ",    "profile_img": "static/img/profile.png",
+    "bio": "",
+    "profile_img": "static/img/profile.png",
     "experience": [
       "FCU iOS Club 7th 教學長",
       "FCU iOS Club 8th 技術長",
