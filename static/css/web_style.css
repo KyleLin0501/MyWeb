@@ -429,6 +429,152 @@ section.active {
 }
 
 
+/* --- 關於我區塊樣式 --- */
+.section-about .profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.section-about .about-content h4 {
+    font-weight: 600;
+}
+
+.section-about .about-content ul {
+    padding-left: 20px;
+}
+
+/* --- 關於我區塊 - 技能專長卡片樣式 --- */
+.section-about .skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 預設為三欄 */
+    gap: 20px;
+}
+
+/* 卡片樣式 */
+.section-about .skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 15, 15, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    cursor: pointer;
+}
+
+/* hover 效果 */
+.section-about .skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(15, 15, 15, 0.12);
+}
+
+/* 內容區塊 */
+.section-about .skill-card i {
+    font-size: 2.5rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.section-about .skill-card h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #111;
+}
+
+/* RWD for Tablets (2 columns) */
+@media (max-width: 991.98px) {
+    .section-about .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RWD for Mobile (1 column) */
+@media (max-width: 767.98px) {
+    .section-about .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- 關於我區塊 - 社群連結卡片樣式 --- */
+.section-about .social-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 預設為四欄 */
+    gap: 20px;
+}
+
+/* 卡片連結外層 */
+.section-about .social-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 卡片樣式 */
+.section-about .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 15, 15, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    cursor: pointer;
+}
+
+/* hover 效果 */
+.section-about .social-card-link:focus .social-card,
+.section-about .social-card-link:hover .social-card {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(15, 15, 15, 0.12);
+    outline: none;
+}
+
+/* 內容區塊 */
+.section-about .social-content {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-about .social-content i {
+    font-size: 2.5rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.section-about .social-content h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #111;
+}
+
+/* RWD for Tablets (2 columns) */
+@media (max-width: 991.98px) {
+    .section-about .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RWD for Mobile (1 column) */
+@media (max-width: 767.98px) {
+    .section-about .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 /* Footer */
 footer {
