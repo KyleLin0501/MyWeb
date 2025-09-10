@@ -15,23 +15,41 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(data => {
       data.forEach(item => {
+        // 1. 建立外層的 a 標籤
         const cardLink = document.createElement('a');
         cardLink.className = 'experience-card-link';
-        cardLink.setAttribute('href', item.href);
+        cardLink.href = item.href;
         cardLink.setAttribute('aria-label', item.ariaLabel);
 
-        const cardHtml = `
-            <div class="experience-card">
-                <div class="experience-image">
-                    <img src="${item.imageSrc}" alt="${item.imageAlt}">
-                </div>
-                <div class="experience-content">
-                    <h4>${item.title}</h4>
-                    <p class="muted">${item.date}</p>
-                </div>
-            </div>
-        `;
-        cardLink.innerHTML = cardHtml;
+        // 2. 建立 experience-card div
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'experience-card';
+
+        // 3. 建立 experience-image div 和 img
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'experience-image';
+        const img = document.createElement('img');
+        img.src = item.imageSrc;
+        img.alt = item.imageAlt;
+        img.loading = 'lazy';
+        imageDiv.appendChild(img);
+
+        // 4. 建立 experience-content div 和內容
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'experience-content';
+        const titleH4 = document.createElement('h4');
+        titleH4.textContent = item.title;
+        const dateP = document.createElement('p');
+        dateP.className = 'muted';
+        dateP.textContent = item.date;
+        contentDiv.appendChild(titleH4);
+        contentDiv.appendChild(dateP);
+
+        // 5. 組合所有元素
+        cardDiv.appendChild(imageDiv);
+        cardDiv.appendChild(contentDiv);
+        cardLink.appendChild(cardDiv);
+
         experienceListContainer.appendChild(cardLink);
       });
     })
