@@ -274,7 +274,8 @@ section.active {
 
 /* --- Develop Section Styles --- */
 
-.section-develop .develop-list-grid {
+.section-develop .develop-list-grid,
+.section-develop .teaching-list-grid {
     display: grid;
     /* 建立三欄式網格，欄位間距 20px */
     grid-template-columns: repeat(3, 1fr);
@@ -355,7 +356,8 @@ section.active {
 
 /* RWD for Tablets (2 columns) */
 @media (max-width: 991.98px) {
-    .section-develop .develop-list-grid {
+    .section-develop .develop-list-grid,
+    .section-develop .teaching-list-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .section-develop .experience-image img {
@@ -367,7 +369,8 @@ section.active {
 
 /* RWD for Mobile (1 column) */
 @media (max-width: 767.98px) {
-    .section-develop .develop-list-grid {
+    .section-develop .develop-list-grid,
+    .section-develop .teaching-list-grid {
         grid-template-columns: 1fr;
     }
     .section-develop .experience-image img {

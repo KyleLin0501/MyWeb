@@ -1,66 +1,122 @@
 [
   {
+    "id": "exp_09",
+    "useInternal": true,
+    "source": "experiences",
+    "href": "",
+    "ariaLabel": "2025 9th iOS Club 新生茶會 學長姐分享",
+    "imageSrc": "static/img/2025iOSClubEvent.JPG",
+    "imageAlt": "2025 9th iOS Club 新生茶會",
+    "title": "2025 9th iOS Club 新生茶會 學長姐分享",
+    "date": "2025 年 9 月",
+    "gallery": [
+      "static/img/iOSClub_迎新茶會_experience/Event01.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event02.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event03.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event04.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event05.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event06.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event07.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event08.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event09.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event10.jpg",
+      "static/img/iOSClub_迎新茶會_experience/Event11.jpg"
+    ]
+  },
+  {
+    "id": "exp_08",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://iplayground.io/2025/#/tw/",
     "ariaLabel": "2025 iPlayground Staff",
     "imageSrc": "static/img/2025iPlayground.JPG",
     "imageAlt": "2025iPlayground",
     "title": "2025 iPlayground 工作人員",
-    "date": "2025 年 8 月"
+    "date": "2025 年 8 月",
+    "gallery": []
   },
   {
+    "id": "exp_07",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2025073101/",
     "ariaLabel": "2025 海峽兩岸青少年創客大賽",
     "imageSrc": "static/img/2025海峽兩岸創客大賽.JPG",
     "imageAlt": "2025人文科技跨域創新實踐競賽",
     "title": "2025 海峽兩岸青少年創客大賽 三等獎",
-    "date": "2025 年 7 月"
+    "date": "2025 年 7 月",
+    "gallery": []
   },
   {
+    "id": "exp_06",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2025062601/",
     "ariaLabel": "2025 人文與科技跨域創新實踐競賽",
     "imageSrc": "static/img/2025人文科技跨域創新實踐競賽.JPG",
     "imageAlt": "2025人文科技跨域創新實踐競賽",
     "title": "2025 人文與科技跨域創新實踐競賽 二等獎",
-    "date": "2025 年 6 月"
+    "date": "2025 年 6 月",
+    "gallery": []
   },
   {
+    "id": "exp_05",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2024112101/",
     "ariaLabel": "2024 MAIC 行動應用創新賽大中華區",
     "imageSrc": "static/img/2024MAIC大中華區決賽.JPG",
     "imageAlt": "2024MAIC大中華區決賽",
     "title": "2024 MAIC 行動應用創新賽 大中華區 二等獎",
-    "date": "2024 年 11 月"
+    "date": "2024 年 11 月",
+    "gallery": []
   },
   {
+    "id": "exp_04",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/fcuershare/news-detail/?id=42132",
     "ariaLabel": "2024 MAIC 行動應用創新賽台灣區",
     "imageSrc": "static/img/2024MAIC台灣決賽.jpg",
     "imageAlt": "2024MAIC台灣決賽",
     "title": "2024 MAIC 行動應用創新賽 台灣 一等獎",
-    "date": "2024 年 7 月"
+    "date": "2024 年 7 月",
+    "gallery": []
   },
   {
+    "id": "exp_03",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2024041502/",
     "ariaLabel": "2024 Swift Student Challenge",
     "imageSrc": "static/img/SSC2024_picture.JPG",
     "imageAlt": "SSC2024_picture",
     "title": "2024 Swift Student Challenge Winner",
-    "date": "2024 年 3 月"
+    "date": "2024 年 3 月",
+    "gallery": []
   },
   {
+    "id": "exp_02",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2024032801/",
     "ariaLabel": "2024 全國電子設計創意競賽",
     "imageSrc": "static/img/全國電子設計創意競賽2024.jpg",
     "imageAlt": "全國電子設計創意競賽2024",
     "title": "2024 全國電子設計創意競賽 冠軍",
-    "date": "2024 年 3 月"
+    "date": "2024 年 3 月",
+    "gallery": []
   },
   {
+    "id": "exp_01",
+    "useInternal": false,
+    "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2023070502/",
     "ariaLabel": "App 行動應用創新賽",
     "imageSrc": "static/img/2023App行動應用創新賽.JPG",
     "imageAlt": "2023App行動應用創新賽",
     "title": "2023 App 行動應用創新賽 三等獎",
-    "date": "2023 年 8 月"
+    "date": "2023 年 8 月",
+    "gallery": []
   }
 ]

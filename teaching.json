@@ -1,0 +1,67 @@
+[
+  {
+    "id": "iOSClub_teaching",
+    "href": "#",
+    "ariaLabel": "iOS Club 社團課程講師",
+    "imageSrc": "static/img/iOSClub_logo.svg",
+    "imageAlt": "iOS Club",
+    "title": "iOS Club <br>社團課程講師",
+    "date": "2022 年 9 月 - 2023 年 6 月",
+    "description": "負責規劃及教授 SwiftUI 基礎課程，帶領社員學習 iOS App 開發。",
+    "gallery": [
+      "static/img/iOSClub_teaching/試上課照片01.jpg",
+      "static/img/iOSClub_teaching/試上課照片02.JPG",
+      "static/img/iOSClub_teaching/試上課照片03.JPG",
+      "static/img/iOSClub_teaching/試上課照片04.jpg"
+    ]
+  },
+  {
+    "id": "wagor_teaching",
+    "href": "#",
+    "ariaLabel": "台中葳格高級中學 多元選修課程程式語言應用課程講師",
+    "imageSrc": "static/img/wagor_logo.png",
+    "imageAlt": "Wagor",
+    "title": "台中葳格高級中學 多元選修課程<br>程式語言應用課程講師",
+    "date": "2022 年 9 月 - 2023 年 6 月",
+    "description": "負責規劃及教授 Swift 及 SwiftUI 基礎課程，帶領學生學習 iOS App 開發。",
+    "gallery": [
+      "static/img/Wagor_teaching/Wagor01.jpg",
+      "static/img/Wagor_teaching/Wagor02.jpg",
+      "static/img/Wagor_teaching/Wagor03.jpg",
+      "static/img/Wagor_teaching/Wagor04.jpg",
+      "static/img/Wagor_teaching/Wagor05.jpg",
+      "static/img/Wagor_teaching/Wagor06.jpg",
+      "static/img/Wagor_teaching/Wagor07.jpg",
+      "static/img/Wagor_teaching/Wagor08.jpg",
+      "static/img/Wagor_teaching/Wagor09.jpg",
+      "static/img/Wagor_teaching/Wagor10.jpg",
+      "static/img/Wagor_teaching/Wagor11.jpg",
+      "static/img/Wagor_teaching/Wagor12.jpg"
+    ]
+  },
+  {
+    "id": "GDGonCampusFCU_teaching",
+    "href": "#",
+    "ariaLabel": "Google Developer Groups FCU 社團課程講師",
+    "imageSrc": "static/img/GDGonCampusFCU_logo.png",
+    "imageAlt": "Google Developer Groups FCU",
+    "title": "Google Developer Groups FCU<br>社團課程講師",
+    "date": "2025 年 9 月 - now",
+    "description": "負責規劃及教授生成式 AI 工具於不同工作流下的應用。",
+    "gallery": [
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus01.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus02.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus03.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus04.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus05.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus06.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus07.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus08.jpeg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus09.jpeg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus10.jpeg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus11.jpg",
+      "static/img/GDGonCampusFCU_teaching/GDGonCampus12.jpg"
+    ]
+  }
+]
+

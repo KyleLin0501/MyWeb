@@ -25,5 +25,14 @@
     "title": "工作站 App<br>開發者",
     "date": "2025 年 9 月 - now",
     "description": "獨立開發一款 iOS 平台下的應用程式，上架至 App Store"
+  },
+  {
+    "href": "https://iosclubcompetition.onrender.com/",
+    "ariaLabel": "iOS App 登場時刻",
+    "imageSrc": "static/img/iOSClub_logo.svg",
+    "imageAlt": "iOS App 登場時刻 Logo",
+    "title": "iOS App 登場時刻 官方網站<br>開發者",
+    "date": "2025 年 10 月 - now",
+    "description": "獨立開發一個競賽報名平台，實際運行於 iOS Club 之社團競賽"
   }
 ]
