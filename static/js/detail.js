@@ -7,13 +7,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 檢查參數是否存在
     if (!source || !id) {
-        // 如果沒有參數，通常是直接開啟網頁，這邊不做動作或顯示錯誤皆可
         const titleEl = document.getElementById('detail-title');
         if (titleEl) titleEl.innerText = "參數錯誤";
         return;
     }
 
-    // 2. 決定讀取哪個 JSON 檔案 (teaching.json 或 experiences.json)
+    // --- 新增功能：處理返回按鈕連結 ---
+    // 根據 source 決定按鈕要跳回首頁的哪個區塊
+    const backBtn = document.querySelector('.back-btn');
+    if (backBtn) {
+        if (source === 'experiences') {
+            // 如果來源是活動經歷，跳回 id="experience"
+            backBtn.href = "index.html#experience";
+        } else {
+            // 預設 (包含 teaching) 跳回 id="develop" (因為你的教學區塊在開發區塊附近)
+            backBtn.href = "index.html#develop";
+        }
+    }
+    // --------------------------------
+
+    // 2. 決定讀取哪個 JSON 檔案
     const jsonFile = `${source}.json`;
 
     fetch(jsonFile)
@@ -45,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const titleEl = document.getElementById('detail-title');
             if (titleEl) titleEl.innerText = "載入發生錯誤";
         });
+
 });
 
 function renderDetail(item) {
