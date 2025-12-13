@@ -1,5 +1,17 @@
 [
   {
+    "id": "exp_10",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://www.cw.com.tw/article/5137423",
+    "ariaLabel": "114 學年度國科會大專生研究計畫 天下雜誌 專題訪問",
+    "imageSrc": "static/img/114Project.webp",
+    "imageAlt": "114 學年度國科會大專生研究計畫 天下雜誌 專題訪問",
+    "title": "114 學年度國科會大專生研究計畫 天下雜誌 專題訪問",
+    "date": "2025 年 9 月",
+    "gallery": []
+  },
+  {
     "id": "exp_09",
     "useInternal": true,
     "source": "experiences",
