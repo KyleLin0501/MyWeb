@@ -197,6 +197,35 @@ section.active {
     font-size: 0.95rem;
 }
 
+/* 篩選按鈕容器 */
+.section-experience .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left; /* 或是 flex-start */
+}
+
+/* 按鈕樣式 */
+.section-experience .filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #333;
+}
+
+.section-experience .filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* 選中狀態 */
+.section-experience .filter-btn.active {
+    background-color: rgba(0, 0, 0, 0.5); /* 你的主色調 */
+    color: #fff;}
+
 /* 手機版 RWD：圖片在上方，固定卡片高度，圖片占滿上方 */
 @media (max-width: 767.98px) {
     .section-experience .experience-card {

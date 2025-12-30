@@ -1,6 +1,6 @@
 [
   {
-    "id": "exp_11",
+    "id": "exp_13",
     "useInternal": false,
     "source": "experiences",
     "href": "",
@@ -9,10 +9,24 @@
     "imageAlt": "2025教育大數據微學程六校聯合成果展",
     "title": "2025教育大數據微學程六校聯合成果展 佳作",
     "date": "2025 年 12 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
-    "id": "exp_10",
+    "id": "exp_12",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://youtu.be/bpwrZqwteSs?si=Cf8yMK3Vn-t2TNYz",
+    "ariaLabel": "2025 iOS Club x GDG on Campus FCU 聯合聖誕期末聚 活動攝影/剪輯",
+    "imageSrc": "static/img/聯合聖誕期末聚.jpg",
+    "imageAlt": "2025 iOS Club x GDG on Campus FCU 聯合聖誕期末聚 活動攝影/剪輯",
+    "title": "iOS Club x GDG on Campus FCU 聖誕期末聚 攝影 / 剪輯",
+    "date": "2025 年 12 月",
+    "gallery": [],
+    "tags": ["活動","影片攝影"]
+  },
+  {
+    "id": "exp_11",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.cw.com.tw/article/5137423",
@@ -21,7 +35,21 @@
     "imageAlt": "114 學年度國科會大專生研究計畫 天下雜誌 專題訪問",
     "title": "114 學年度國科會大專生研究計畫 天下雜誌 專題訪問",
     "date": "2025 年 9 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["分享"]
+  },
+  {
+    "id": "exp_10",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://youtu.be/T6zFrowCwtI?si=xYa1dVCUciobrqAM",
+    "ariaLabel": "2025 GDG on Campus FCU 迎新茶會活動攝影 / 剪輯",
+    "imageSrc": "static/img/迎新茶會.JPG",
+    "imageAlt": "GDG on Campus FCU 迎新茶會 攝影 / 剪輯",
+    "title": "GDG on Campus FCU 迎新茶會 攝影 / 剪輯",
+    "date": "2025 年 9 月",
+    "gallery": [],
+    "tags": ["活動","影片攝影"]
   },
   {
     "id": "exp_09",
@@ -45,7 +73,8 @@
       "static/img/iOSClub_迎新茶會_experience/Event09.jpg",
       "static/img/iOSClub_迎新茶會_experience/Event10.jpg",
       "static/img/iOSClub_迎新茶會_experience/Event11.JPG"
-    ]
+    ],
+    "tags": ["分享"]
   },
   {
     "id": "exp_08",
@@ -57,7 +86,8 @@
     "imageAlt": "2025iPlayground",
     "title": "2025 iPlayground 工作人員",
     "date": "2025 年 8 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["活動"]
   },
   {
     "id": "exp_07",
@@ -69,7 +99,8 @@
     "imageAlt": "2025人文科技跨域創新實踐競賽",
     "title": "2025 海峽兩岸青少年創客大賽 三等獎",
     "date": "2025 年 7 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_06",
@@ -81,7 +112,8 @@
     "imageAlt": "2025人文科技跨域創新實踐競賽",
     "title": "2025 人文與科技跨域創新實踐競賽 二等獎",
     "date": "2025 年 6 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_05",
@@ -93,7 +125,8 @@
     "imageAlt": "2024MAIC大中華區決賽",
     "title": "2024 MAIC 行動應用創新賽 大中華區 二等獎",
     "date": "2024 年 11 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_04",
@@ -105,7 +138,8 @@
     "imageAlt": "2024MAIC台灣決賽",
     "title": "2024 MAIC 行動應用創新賽 台灣 一等獎",
     "date": "2024 年 7 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_03",
@@ -117,7 +151,8 @@
     "imageAlt": "SSC2024_picture",
     "title": "2024 Swift Student Challenge Winner",
     "date": "2024 年 3 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_02",
@@ -129,7 +164,8 @@
     "imageAlt": "全國電子設計創意競賽2024",
     "title": "2024 全國電子設計創意競賽 冠軍",
     "date": "2024 年 3 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   },
   {
     "id": "exp_01",
@@ -141,6 +177,7 @@
     "imageAlt": "2023App行動應用創新賽",
     "title": "2023 App 行動應用創新賽 三等獎",
     "date": "2023 年 8 月",
-    "gallery": []
+    "gallery": [],
+    "tags": ["競賽"]
   }
 ]
