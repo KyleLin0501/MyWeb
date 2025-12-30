@@ -19,17 +19,36 @@ document.addEventListener('DOMContentLoaded', function () {
                 const cardLink = document.createElement('a');
                 cardLink.className = 'experience-card-link';
 
-                // === 連結判斷邏輯 ===
+                // === 修改後的連結判斷邏輯開始 ===
+                let targetUrl = "";
+
+                // 先決定網址是什麼
                 if (item.useInternal) {
-                    // [情況 A] 連到內部詳情頁 (detail.html)
-                    cardLink.href = `detail.html?source=${item.source}&id=${item.id}`;
-                    cardLink.target = "_self"; // 在當前分頁開啟
+                    // [情況 A] 內部連結 (detail.html)
+                    targetUrl = `detail.html?source=${item.source}&id=${item.id}`;
                 } else {
-                    // [情況 B] 連到外部網站
-                    cardLink.href = item.href;
-                    cardLink.target = "_blank"; // 外部連結建議開新分頁
-                    cardLink.rel = "noopener noreferrer";
+                    // [情況 B] 外部連結，若 item.href 未定義則視為空字串
+                    targetUrl = item.href || "";
                 }
+
+                // 判斷網址是否有效
+                if (targetUrl.trim() !== "") {
+                    // 有網址：設定 href 與 target
+                    cardLink.href = targetUrl;
+
+                    if (item.useInternal) {
+                        cardLink.target = "_self"; // 內部連結：當前分頁開啟
+                    } else {
+                        cardLink.target = "_blank"; // 外部連結：新分頁開啟
+                        cardLink.rel = "noopener noreferrer";
+                    }
+                } else {
+                    // 無網址 (targetUrl 為空)：
+                    // 1. 不設定 href 屬性 (這樣 <a> 標籤就不會跳轉)
+                    // 2. 將滑鼠游標改為預設樣式 (避免出現手指圖示)
+                    cardLink.style.cursor = "default";
+                }
+                // === 修改後的連結判斷邏輯結束 ===
 
                 cardLink.setAttribute('aria-label', item.ariaLabel);
 
@@ -42,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 imageDiv.className = 'experience-image';
 
                 const img = document.createElement('img');
-                img.src = item.imageSrc || 'static/img/placeholder.png'; // 預設圖防呆
-                img.alt = item.imageAlt;
+                // 這裡改用 item.imageSrc 配合防呆
+                img.src = item.imageSrc || 'static/img/placeholder.png';
+                img.alt = item.imageAlt || ''; // 防呆：如果沒 alt 至少給空字串
                 img.loading = 'lazy';
 
                 // CSS 樣式通常寫在 CSS 檔，但這裡確保圖片填滿
@@ -58,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 contentDiv.className = 'experience-content';
 
                 const titleH4 = document.createElement('h4');
+                // 建議使用 textContent 防止 XSS，若需解析 HTML 才用 innerHTML
                 titleH4.innerHTML = item.title;
 
                 const dateP = document.createElement('p');

@@ -27,16 +27,34 @@ document.addEventListener('DOMContentLoaded', function () {
                     cardLink.className = 'experience-card-link';
 
                     // === 關鍵修改邏輯開始 ===
+                    let targetUrl = "";
+
                     if (internalSource) {
-                        // 【Teaching 模式】：連到內部詳情頁
-                        // 網址格式：detail.html?source=teaching&id=xxxx
-                        cardLink.setAttribute('href', `detail.html?source=${internalSource}&id=${item.id}`);
-                        // 內部連結通常不需要 target="_blank"，除非你想在新分頁開
+                        // 【Teaching 模式】：產生內部連結
+                        // 這邊一定會有值，所以不用擔心是空字串
+                        targetUrl = `detail.html?source=${internalSource}&id=${item.id}`;
                     } else {
-                        // 【Develop 模式】：維持原本操作 (連到外部網站)
-                        cardLink.setAttribute('href', item.href);
-                        cardLink.setAttribute('target', '_blank');
-                        cardLink.setAttribute('rel', 'noopener noreferrer');
+                        // 【Develop 模式】：使用 JSON 內的 href
+                        // 確保 undefined 或 null 也被視為空字串
+                        targetUrl = item.href || "";
+                    }
+
+                    // 判斷網址是否有效（移除空白後不為空）
+                    if (targetUrl.trim() !== "") {
+                        cardLink.setAttribute('href', targetUrl);
+
+                        // 只有外部連結才需要開新分頁
+                        if (!internalSource) {
+                            cardLink.setAttribute('target', '_blank');
+                            cardLink.setAttribute('rel', 'noopener noreferrer');
+                        }
+                    } else {
+                        // 如果網址是空的：
+                        // 1. 不設定 href 屬性 (這樣 <a> 標籤就不具備連結功能，點擊無反應)
+                        // 2. 將游標改為預設箭頭，讓使用者知道不可點擊
+                        cardLink.style.cursor = "default";
+                        // 3. 移除 href 屬性以防萬一 (雖然新建立的本來就沒有)
+                        cardLink.removeAttribute('href');
                     }
                     // === 關鍵修改邏輯結束 ===
 
@@ -92,10 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- 執行程式 ---
 
     // 1. 載入開發經歷 (Develop)
-    // 不傳入第三個參數 -> 維持原本操作 (讀取 item.href 並另開視窗)
     loadExperience('develop.json', '.develop-list-grid');
 
     // 2. 載入教學經歷 (Teaching)
-    // 傳入 'teaching' -> 改為連到 detail.html
     loadExperience('teaching.json', '.teaching-list-grid', 'teaching');
 });

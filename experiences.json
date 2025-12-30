@@ -1,5 +1,17 @@
 [
   {
+    "id": "exp_11",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "",
+    "ariaLabel": "2025 教育大數據微學程六校聯合成果展",
+    "imageSrc": "static/img/2025教育大數據微學程六校聯合成果展.JPG",
+    "imageAlt": "2025教育大數據微學程六校聯合成果展",
+    "title": "2025教育大數據微學程六校聯合成果展 佳作",
+    "date": "2025 年 12 月",
+    "gallery": []
+  },
+  {
     "id": "exp_10",
     "useInternal": false,
     "source": "experiences",
