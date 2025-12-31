@@ -215,6 +215,8 @@ section.active {
     transition: all 0.3s ease;
     font-size: 1rem;
     color: #333;
+    outline: none;
+
 }
 
 .section-experience .filter-btn:hover {
