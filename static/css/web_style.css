@@ -70,7 +70,7 @@ section.active {
 /* 首頁容器 */
 .section-index .home-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 500px;
     z-index: 1;
 }
 
@@ -98,7 +98,112 @@ section.active {
     color: #FFFFFF;
 }
 
-@media (max-width: 767.98px) {
+/* Banner 外層容器 */
+.section-index .experience-banner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 輪播軌道 */
+.section-index .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-index .no-animation .carousel-item,
+.section-index .no-animation .carousel-container {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* 單個項目卡片 */
+.section-index .carousel-item {
+    min-width: 60%; /* 中間卡片佔寬度 */
+    height: 450px;
+    margin: 0 10px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+    opacity: 0.5;
+    transform: scale(0.8); /* 預設縮小 */
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 被啟動的（中間）卡片 */
+.section-index .carousel-item.active {
+    opacity: 1;
+    transform: scale(1); /* 中間放大 */
+    z-index: 2;
+}
+
+.section-index .carousel-item img {
+    width: 100%;
+    height: 80%; /* 從 70% 增加到 80%，給照片更多發揮空間 */
+    object-fit: cover; /* 確保圖片填滿，不會變形 */
+    object-position: center; /* 確保人像或重點保持在中間 */
+}
+
+.section-index .carousel-info {
+    height: 20%; /* 剩餘的 20% 給文字 */
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: white; /* 讓文字底色與圖片分開 */
+}
+
+.section-index .carousel-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 控制按鈕 */
+.section-index .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+.section-index .prev { left: 5%; }
+.section-index .next { right: 5%; }
+
+.section-index .carousel-btn:hover { background: rgba(0,0,0,0.6); }
+
+/* RWD 調整 */
+@media (max-width: 768px) {
+    .section-index .carousel-item {
+        min-width: 80%;
+        height: 80%;
+    }
+    .section-index .experience-banner-wrapper {
+        height: 500px;
+    }
     .section-index .home-container {
         position: relative;
         min-height: 80% !important;
