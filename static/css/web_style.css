@@ -122,9 +122,8 @@ section.active {
 }
 
 .section-index .no-animation .carousel-item,
-.section-index .no-animation .carousel-container {
+.section-index .no-transition {
     transition: none !important;
-    animation: none !important;
 }
 
 /* 單個項目卡片 */
