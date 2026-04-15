@@ -1,5 +1,44 @@
 [
   {
+    "id": "exp_16",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://www.fcu.edu.tw/news/2026040801/",
+    "ariaLabel": "2026年第22屆全國電子設計創意競賽_資通類_季軍",
+    "imageSrc": "static/img/2026年第22屆全國電子設計創意競賽_資通類_季軍.jpg",
+    "imageAlt": "2026年第22屆全國電子設計創意競賽_資通類_季軍",
+    "title": "2026 全國電子設計創意競賽 資通類 季軍",
+    "date": "2026 年 3 月",
+    "gallery": [],
+    "tags": ["競賽"]
+  },
+  {
+    "id": "exp_15",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://www.fcu.edu.tw/news/2026040801/",
+    "ariaLabel": "2026年第22屆全國電子設計創意競賽_資通類_佳作",
+    "imageSrc": "static/img/2026年第22屆全國電子設計創意競賽_資通類_佳作.jpg",
+    "imageAlt": "2026年第22屆全國電子設計創意競賽_資通類_佳作",
+    "title": "2026 全國電子設計創意競賽 資通類 佳作",
+    "date": "2026 年 3 月",
+    "gallery": [],
+    "tags": ["競賽"]
+  },
+  {
+    "id": "exp_15",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://www.fcu.edu.tw/news/2026040801/",
+    "ariaLabel": "2026年第22屆全國電子設計創意競賽_智慧大數據及行動APP類_佳作",
+    "imageSrc": "static/img/2026年第22屆全國電子設計創意競賽_智慧大數據及行動APP類_佳作.JPG",
+    "imageAlt": "2026年第22屆全國電子設計創意競賽_智慧大數據及行動APP類_佳作",
+    "title": "2026 全國電子設計創意競賽 智慧大數據及APP類 佳作",
+    "date": "2026 年 3 月",
+    "gallery": [],
+    "tags": ["競賽"]
+  },
+  {
     "id": "exp_13",
     "useInternal": false,
     "source": "experiences",
