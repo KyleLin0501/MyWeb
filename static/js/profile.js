@@ -47,17 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // 載入個人簡介
       document.getElementById('about-name').textContent = aboutData.name;
-      document.getElementById('about-title').textContent = aboutData.title;
       document.getElementById('about-profile-img').src = aboutData.profile_img;
       document.getElementById('about-bio').textContent = aboutData.bio;
 
-      // 載入個人經歷
-      const experienceList = document.getElementById('about-experience');
-      aboutData.experience.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        experienceList.appendChild(li);
-      });
+      // 載入教育背景與個人經歷
+      renderInfoCards('about-education', aboutData.education || []);
+      renderInfoCards('about-journey', aboutData.journey || []);
 
       // 載入技能專長
       const skillsList = document.getElementById('about-skills');
@@ -82,6 +77,55 @@ document.addEventListener('DOMContentLoaded', function () {
         skillsList.appendChild(skillCard);
       });
 
+      function renderInfoCards(containerId, items) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        items.forEach(item => {
+          const hasLink = Boolean(item.link && item.link.trim());
+          const wrapper = hasLink ? document.createElement('a') : document.createElement('div');
+          wrapper.className = hasLink ? 'info-card-link' : 'info-card-static';
+
+          if (hasLink) {
+            wrapper.href = item.link;
+
+            if (/^https?:\/\//i.test(item.link)) {
+              wrapper.target = '_blank';
+              wrapper.rel = 'noopener noreferrer';
+            }
+          }
+
+          const infoCard = document.createElement('div');
+          infoCard.className = 'info-card';
+
+          const imageWrapper = document.createElement('div');
+          imageWrapper.className = 'info-card-image-wrapper';
+
+          const image = document.createElement('img');
+          image.className = 'info-card-image';
+          image.src = item.image;
+          image.alt = item.title;
+
+          const content = document.createElement('div');
+          content.className = 'info-card-content';
+
+          const title = document.createElement('h4');
+          title.textContent = item.title;
+
+          const period = document.createElement('p');
+          period.className = 'info-card-period';
+          period.textContent = item.period || '';
+
+          imageWrapper.appendChild(image);
+          content.appendChild(title);
+          content.appendChild(period);
+          infoCard.appendChild(imageWrapper);
+          infoCard.appendChild(content);
+          wrapper.appendChild(infoCard);
+          container.appendChild(wrapper);
+        });
+      }
+
       // 輔助函式：根據技能名稱回傳對應的 Font Awesome 圖示類別
       function getSkillIconClass(skillName) {
         switch(skillName.toLowerCase()) {
@@ -97,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
             return 'fab fa-python';
           case 'java':
             return 'fab fa-java';
+          case 'c/c++':
+            return 'fas fa-code';
           default:
             return 'fas fa-cogs'; // 預設圖示
         }

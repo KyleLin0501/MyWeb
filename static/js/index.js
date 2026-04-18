@@ -2,7 +2,6 @@ let rawData = [];
 let currentIndex = 1;
 let isTransitioning = false;
 let autoPlayInterval;
-let isPaused = false;
 
 async function initCarousel() {
     try {
@@ -43,22 +42,13 @@ async function initCarousel() {
         }).join('');
 
         // 3. 初始定位
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             updateCarousel(true);
             startAutoPlay();
-        }, 100);
+        });
 
         // 4. 事件監聽
         container.addEventListener('transitionend', handleTransitionEnd);
-
-        wrapper.addEventListener('mouseenter', () => {
-            isPaused = true;
-            stopAutoPlay();
-        });
-        wrapper.addEventListener('mouseleave', () => {
-            isPaused = false;
-            startAutoPlay();
-        });
 
         // 5. 關鍵修正：自動偵測 Section 顯示狀態
         initVisibilityObserver(wrapper);
@@ -77,10 +67,10 @@ function initVisibilityObserver(element) {
             if (entry.isIntersecting) {
                 // 當 Section 顯示時，強制校正並啟動
                 console.log("Banner 已顯示，啟動輪播...");
-                setTimeout(() => {
+                requestAnimationFrame(() => {
                     updateCarousel(true);
                     startAutoPlay();
-                }, 100);
+                });
             } else {
                 // 當 Section 隱藏時，停止計時省電
                 stopAutoPlay();
@@ -103,7 +93,6 @@ function updateCarousel(noAnimation = false) {
     if (wrapperWidth === 0) return;
 
     if (noAnimation) {
-        isTransitioning = false; // 強制解除鎖定
         wrapper.classList.add('no-animation');
         container.classList.add('no-transition');
     } else {
@@ -141,37 +130,57 @@ function updateCarousel(noAnimation = false) {
     }
 }
 
-function handleTransitionEnd() {
+function runAfterPaint(callback) {
+    requestAnimationFrame(() => {
+        requestAnimationFrame(callback);
+    });
+}
+
+function handleTransitionEnd(event) {
+    if (event.target !== event.currentTarget || event.propertyName !== 'transform') return;
     isTransitioning = false;
-    if (currentIndex === rawData.length + 1) {
-        currentIndex = 1;
-        updateCarousel(true);
-    }
-    if (currentIndex === 0) {
-        currentIndex = rawData.length;
-        updateCarousel(true);
-    }
 }
 
 function moveNext() {
-    if (isTransitioning) return;
+    if (isTransitioning || rawData.length === 0) return;
     isTransitioning = true;
     startAutoPlay(); // 手動點擊時重設計時器
+
+    if (currentIndex === rawData.length) {
+        currentIndex = 0;
+        updateCarousel(true);
+        runAfterPaint(() => {
+            currentIndex = 1;
+            updateCarousel(false);
+        });
+        return;
+    }
+
     currentIndex++;
     updateCarousel(false);
 }
 
 function movePrev() {
-    if (isTransitioning) return;
+    if (isTransitioning || rawData.length === 0) return;
     isTransitioning = true;
     startAutoPlay(); // 手動點擊時重設計時器
+
+    if (currentIndex === 1) {
+        currentIndex = rawData.length + 1;
+        updateCarousel(true);
+        runAfterPaint(() => {
+            currentIndex = rawData.length;
+            updateCarousel(false);
+        });
+        return;
+    }
+
     currentIndex--;
     updateCarousel(false);
 }
 
 function startAutoPlay() {
     stopAutoPlay();
-    if (isPaused) return;
     autoPlayInterval = setInterval(() => {
         if (!document.hidden) moveNext();
     }, 5000);

@@ -1,13 +1,59 @@
 {
   "about": {
     "name": "Kyle 楷祐",
-    "title": "逢甲大學 資訊工程學系 四年級",
     "bio": "",
     "profile_img": "static/img/profile.png",
-    "experience": [
-      "FCU iOS Club 7th 教學長",
-      "FCU iOS Club 8th 技術長",
-      "iPlayground 2025 Staff"
+    "education": [
+      {
+        "title": "逢甲大學 資訊工程學系",
+        "image": "static/img/FCU_logo.png",
+        "period": "2021 - 至今",
+        "link": "https://www.iecs.fcu.edu.tw/"
+      },
+      {
+        "title": "國立竹東高級中學",
+        "image": "static/img/CTSH_logo.png",
+        "period": "2019 - 2021",
+        "link": "https://www.ctsh.hcc.edu.tw/"
+      }
+    ],
+    "journey": [
+      {
+        "title": "FCU iOS Club 7th 教學長",
+        "image": "static/img/iOSClub_logo.svg",
+        "period": "2023",
+        "link": "https://iosclub.tw/"
+      },
+      {
+        "title": "FCU iOS Club 8th 技術長",
+        "image": "static/img/iOSClub_logo.svg",
+        "period": "2024",
+        "link": "https://iosclub.tw/"
+      },
+      {
+        "title": "FCU iOS Club 9th 網管",
+        "image": "static/img/iOSClub_logo.svg",
+        "period": "2025",
+        "link": "https://iosclub.tw/"
+      },
+      {
+        "title": "GDG on Campus FCU 課程總監",
+        "image": "static/img/GDGonCampusFCU_logo.png",
+        "period": "2025",
+        "link": "https://gdg.community.dev/gdg-on-campus-feng-chia-university-taichung-city-taiwan/"
+      },
+      {
+        "title": "iPlayground 2025 宣傳組",
+        "image": "static/img/iplaground_logo.jpg",
+        "period": "2025",
+        "link": "https://iplayground.io/2025/#/en"
+      },
+      {
+        "title": "iPlayground 2026 Staff",
+        "image": "static/img/iplaground_logo.jpg",
+        "period": "2026",
+        "link": ""
+      }
     ],
     "skills": [
       "Swift",

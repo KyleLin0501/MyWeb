@@ -1,6 +1,6 @@
 [
   {
-    "id": "exp_16",
+    "id": "exp_17",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2026040801/",
@@ -13,7 +13,7 @@
     "tags": ["競賽"]
   },
   {
-    "id": "exp_15",
+    "id": "exp_16",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2026040801/",
@@ -39,7 +39,7 @@
     "tags": ["競賽"]
   },
   {
-    "id": "exp_13",
+    "id": "exp_14",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2025123102/?utm_source=Facebook&utm_medium=facebook-news&utm_campaign=fb-fcuweekly&utm_id=pr01",
@@ -52,7 +52,7 @@
     "tags": ["競賽"]
   },
   {
-    "id": "exp_12",
+    "id": "exp_13",
     "useInternal": false,
     "source": "experiences",
     "href": "https://youtu.be/bpwrZqwteSs?si=Cf8yMK3Vn-t2TNYz",
@@ -65,7 +65,7 @@
     "tags": ["活動","影片攝影"]
   },
   {
-    "id": "exp_11",
+    "id": "exp_12",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.cw.com.tw/article/5137423",
@@ -78,7 +78,7 @@
     "tags": ["分享"]
   },
   {
-    "id": "exp_10",
+    "id": "exp_11",
     "useInternal": false,
     "source": "experiences",
     "href": "https://youtu.be/T6zFrowCwtI?si=xYa1dVCUciobrqAM",
@@ -91,7 +91,7 @@
     "tags": ["活動","影片攝影"]
   },
   {
-    "id": "exp_09",
+    "id": "exp_10",
     "useInternal": true,
     "source": "experiences",
     "href": "",
@@ -101,22 +101,22 @@
     "title": "2025 9th iOS Club 新生茶會 學長姐分享",
     "date": "2025 年 9 月",
     "gallery": [
-      "static/img/iOSClub_迎新茶會_experience/Event01.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event02.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event03.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event04.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event05.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event06.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event07.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event08.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event09.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event10.jpg",
-      "static/img/iOSClub_迎新茶會_experience/Event11.JPG"
+      "static/img/2025_iOSClub_迎新茶會_experience/Event01.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event02.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event03.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event04.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event05.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event06.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event07.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event08.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event09.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event10.jpg",
+      "static/img/2025_iOSClub_迎新茶會_experience/Event11.JPG"
     ],
-    "tags": ["分享"]
+    "tags": ["活動","分享"]
   },
   {
-    "id": "exp_08",
+    "id": "exp_09",
     "useInternal": false,
     "source": "experiences",
     "href": "https://iplayground.io/2025/#/tw/",
@@ -129,7 +129,7 @@
     "tags": ["活動"]
   },
   {
-    "id": "exp_07",
+    "id": "exp_08",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2025073101/",
@@ -142,7 +142,7 @@
     "tags": ["競賽"]
   },
   {
-    "id": "exp_06",
+    "id": "exp_07",
     "useInternal": false,
     "source": "experiences",
     "href": "https://www.fcu.edu.tw/news/2025062601/",
@@ -153,6 +153,24 @@
     "date": "2025 年 6 月",
     "gallery": [],
     "tags": ["競賽"]
+  },
+  {
+    "id": "exp_06",
+    "useInternal": true,
+    "source": "experiences",
+    "href": "",
+    "ariaLabel": "2025 行動應用創新賽 宣講會分享",
+    "imageSrc": "static/img/2025_MAIC宣講會.JPG",
+    "imageAlt": "2025 行動應用創新賽 宣講會分享",
+    "title": "2025 行動應用創新賽 宣講會分享",
+    "date": "2025 年 3 月",
+    "gallery": [
+      "static/img/2025_MAIC宣講會_experience/2025_MAIC宣講會01.JPG",
+      "static/img/2025_MAIC宣講會_experience/2025_MAIC宣講會02.JPG",
+      "static/img/2025_MAIC宣講會_experience/2025_MAIC宣講會03.JPG",
+      "static/img/2025_MAIC宣講會_experience/2025_MAIC宣講會04.JPG"
+    ],
+    "tags": ["活動","分享"]
   },
   {
     "id": "exp_05",

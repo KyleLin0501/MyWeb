@@ -188,11 +188,19 @@ section.active {
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
+    outline: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 .section-index .prev { left: 5%; }
 .section-index .next { right: 5%; }
 
 .section-index .carousel-btn:hover { background: rgba(0,0,0,0.6); }
+
+.section-index .carousel-btn:focus,
+.section-index .carousel-btn:focus-visible {
+    background: rgba(0,0,0,0.55);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.2);
+}
 
 /* RWD 調整 */
 @media (max-width: 768px) {
@@ -585,33 +593,98 @@ section.active {
     padding-left: 20px;
 }
 
-/* --- 關於我區塊 - 技能專長卡片樣式 --- */
+.section-about .info-list,
 .section-about .skills-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 預設為三欄 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
-/* 卡片樣式 */
+.section-about .info-card,
 .section-about .skill-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
+    min-height: 118px;
     height: 100%;
-    text-align: center;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(15, 15, 15, 0.08);
     transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.section-about .info-card {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.section-about .info-card-link,
+.section-about .info-card-static {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-about .skill-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     cursor: pointer;
 }
 
 /* hover 效果 */
+.section-about .info-card:hover,
 .section-about .skill-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(15, 15, 15, 0.12);
+}
+
+.section-about .skill-card:hover {
     cursor: default;
+}
+
+.section-about .info-card-image-wrapper {
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section-about .info-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-about .info-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    text-align: left;
+}
+
+.section-about .info-card h4 {
+    margin: 0;
+    color: #111;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.section-about .info-card-period {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
 }
 
 /* 內容區塊 */
@@ -629,6 +702,7 @@ section.active {
 
 /* RWD for Tablets (2 columns) */
 @media (max-width: 991.98px) {
+    .section-about .info-list,
     .section-about .skills-list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -636,8 +710,13 @@ section.active {
 
 /* RWD for Mobile (1 column) */
 @media (max-width: 767.98px) {
+    .section-about .info-list,
     .section-about .skills-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .section-about .info-card {
+        padding: 18px;
     }
 }
 
