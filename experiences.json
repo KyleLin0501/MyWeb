@@ -1,5 +1,18 @@
 [
   {
+    "id": "exp_18",
+    "useInternal": false,
+    "source": "experiences",
+    "href": "https://www.fcu.edu.tw/news/2026070301/",
+    "ariaLabel": "2026年行動應用創新賽_三等獎",
+    "imageSrc": "static/img/2026年行動應用創新賽_三等獎.jpeg",
+    "imageAlt": "2026年行動應用創新賽_三等獎",
+    "title": "2026 行動應用創新賽 三等獎",
+    "date": "2026 年 7 月",
+    "gallery": [],
+    "tags": ["競賽"]
+  },
+  {
     "id": "exp_17",
     "useInternal": false,
     "source": "experiences",
