@@ -1,8 +1,9 @@
 {
   "about": {
     "name": "Kyle 楷祐",
-    "bio": "",
+    "bio": "學習 iOS 與 Web 開發，具備技術社群經營及教學經驗。",
     "profile_img": "static/img/profile.png",
+    "email": "kylelin.development@gmail.com",
     "education": [
       {
         "title": "逢甲大學 資訊工程學系",
@@ -52,7 +53,7 @@
         "title": "iPlayground 2026 Staff",
         "image": "static/img/iplaground_logo.jpg",
         "period": "2026",
-        "link": ""
+        "link": "https://iplayground.io/2026"
       }
     ],
     "skills": [

@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('about-name').textContent = aboutData.name;
       document.getElementById('about-profile-img').src = aboutData.profile_img;
       document.getElementById('about-bio').textContent = aboutData.bio;
+      initEmailCopy(aboutData.email || '');
 
       // 載入教育背景與個人經歷
       renderInfoCards('about-education', aboutData.education || []);
@@ -124,6 +125,58 @@ document.addEventListener('DOMContentLoaded', function () {
           wrapper.appendChild(infoCard);
           container.appendChild(wrapper);
         });
+      }
+
+      function initEmailCopy(email) {
+        const emailText = document.getElementById('about-email-text');
+        const emailButton = document.getElementById('about-email-copy');
+        if (!emailText || !emailButton || !email) return;
+
+        const icon = emailButton.querySelector('i');
+        let resetStateTimeoutId;
+        emailText.textContent = email;
+
+        emailButton.addEventListener('click', async () => {
+          const copied = await copyText(email);
+          if (!icon) return;
+
+          clearTimeout(resetStateTimeoutId);
+          icon.className = copied ? 'fas fa-check' : 'fas fa-times';
+          emailButton.setAttribute('aria-label', copied ? '已複製電子郵件' : '複製失敗');
+
+          resetStateTimeoutId = window.setTimeout(() => {
+            icon.className = 'far fa-copy';
+            emailButton.setAttribute('aria-label', '複製電子郵件');
+          }, 1400);
+        });
+      }
+
+      async function copyText(text) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return true;
+          }
+        } catch (error) {
+          console.error('Clipboard API 複製失敗:', error);
+        }
+
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.setAttribute('readonly', '');
+        textArea.style.position = 'absolute';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          return document.execCommand('copy');
+        } catch (error) {
+          console.error('execCommand 複製失敗:', error);
+          return false;
+        } finally {
+          document.body.removeChild(textArea);
+        }
       }
 
       // 輔助函式：根據技能名稱回傳對應的 Font Awesome 圖示類別

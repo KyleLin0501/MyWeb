@@ -537,6 +537,41 @@ section.active {
     font-weight: 600;
 }
 
+.section-about #about-bio {
+    margin-bottom: 16px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.section-about .about-email-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 10px;
+    background: transparent;
+    color: #111;
+    font-size: 0.96rem;
+    line-height: 1.2;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.section-about .about-email-copy-btn:hover {
+    background: rgba(17, 17, 17, 0.04);
+    border-color: rgba(17, 17, 17, 0.18);
+}
+
+.section-about .about-email-copy-btn:focus,
+.section-about .about-email-copy-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.08);
+}
+
+.section-about #about-email-text {
+    word-break: break-all;
+}
+
 .section-about .about-content ul {
     padding-left: 20px;
 }
@@ -713,6 +748,11 @@ section.active {
     .section-about .info-list,
     .section-about .skills-list {
         grid-template-columns: 1fr;
+    }
+
+    .section-about .about-email-copy-btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .section-about .info-card {
