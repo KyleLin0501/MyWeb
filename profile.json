@@ -6,9 +6,15 @@
     "email": "kylelin.development@gmail.com",
     "education": [
       {
+        "title": "國立成功大學 製造資訊與系統研究所",
+        "image": "",
+        "period": "2026 - 至今",
+        "link": "https://imis.ncku.edu.tw/"
+      },
+      {
         "title": "逢甲大學 資訊工程學系",
         "image": "static/img/FCU_logo.png",
-        "period": "2021 - 至今",
+        "period": "2021 - 2026",
         "link": "https://www.iecs.fcu.edu.tw/"
       },
       {
