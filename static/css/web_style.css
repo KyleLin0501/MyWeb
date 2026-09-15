@@ -70,8 +70,121 @@ section.active {
 /* 首頁容器 */
 .section-index .home-container {
     position: relative;
-    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    min-height: 540px;
+    padding-top: 32px;
+    padding-bottom: 56px;
     z-index: 1;
+}
+
+.home-eyebrow {
+    margin-bottom: 28px;
+    color: #65736c;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+}
+
+.home-intro-line {
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: 32px;
+    background: #9aa99d;
+    border-radius: 2px;
+}
+
+.home-portrait {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 16px 0 auto;
+    isolation: isolate;
+}
+
+/* 偏移細框讓照片在留白中保有層次。 */
+.home-portrait::before {
+    content: "";
+    position: absolute;
+    inset: 18px -16px -18px 16px;
+    z-index: -1;
+    border: 1px solid #c8d1c9;
+    border-radius: 40px 112px 40px 40px;
+    background: #f3f5f1;
+}
+
+.home-portrait-frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.08;
+    border-radius: 40px 112px 40px 40px;
+    background: #dce3dd;
+    box-shadow: 0 24px 48px -28px rgba(32, 49, 39, 0.4);
+}
+
+.home-portrait-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* 半透明 mask：保留臉部清晰度，底部以墨綠漸層襯托玻璃標籤。 */
+.home-portrait-mask {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(232, 239, 230, 0.08) 0%,
+        rgba(31, 49, 39, 0) 42%, rgba(24, 42, 33, 0.18) 65%,
+        rgba(18, 36, 27, 0.62) 100%);
+}
+
+.home-portrait-caption {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    padding: 16px 20px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    background: rgba(24, 42, 33, 0.45);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.home-portrait-caption-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+}
+
+.home-portrait-caption-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 14px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.home-portrait-caption-name span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-intro .animate__animated {
+        animation: none;
+    }
 }
 
 .section-index .bg-black {
@@ -153,13 +266,14 @@ section.active {
 
 .section-index .carousel-item img {
     width: 100%;
-    height: 80%; /* 從 70% 增加到 80%，給照片更多發揮空間 */
+    height: calc(100% - 96px);
     object-fit: cover; /* 確保圖片填滿，不會變形 */
     object-position: center; /* 確保人像或重點保持在中間 */
 }
 
 .section-index .carousel-info {
-    height: 20%; /* 剩餘的 20% 給文字 */
+    height: 96px; /* 預留兩行標題與日期的空間 */
+    flex-shrink: 0;
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
@@ -171,9 +285,19 @@ section.active {
 .section-index .carousel-info h4 {
     margin: 0;
     font-size: 1.1rem;
-    white-space: nowrap;
+    line-height: 1.3;
+    min-height: 2.6em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    white-space: normal;
+    overflow-wrap: anywhere;
     overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.section-index .carousel-info p {
+    margin: 4px 0 0;
 }
 
 /* 控制按鈕 */
@@ -203,18 +327,61 @@ section.active {
 }
 
 /* RWD 調整 */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
+    .navbar-custom {
+        padding: 0.5rem 0.75rem;
+    }
+    .navbar-custom .nav-item {
+        padding: 0;
+    }
+    .navbar-custom .nav-link {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
     .section-index .carousel-item {
-        min-width: 80%;
-        height: 80%;
+        flex: 0 0 80%;
+        min-width: 0;
+        height: auto;
+    }
+    .section-index .carousel-item img {
+        flex: none;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+    .section-index .carousel-info {
+        height: auto;
+        min-height: 96px;
+    }
+    .section-index .carousel-container {
+        height: auto;
     }
     .section-index .experience-banner-wrapper {
-        height: 500px;
+        height: auto;
+        margin: 24px auto;
+        padding: 20px 0;
     }
     .section-index .home-container {
-        position: relative;
-        min-height: 80% !important;
-        z-index: 1;
+        grid-template-columns: 1fr;
+        gap: 36px;
+        min-height: auto;
+        padding: 24px 24px 40px;
+    }
+    .home-eyebrow {
+        margin-bottom: 20px;
+    }
+    .home-intro-line {
+        margin-top: 24px;
+    }
+    .home-portrait {
+        width: calc(100% - 16px);
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .home-portrait-caption {
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+        padding: 14px 16px;
     }
     .section-index h3 {
         font-size: 1.5rem;
@@ -340,7 +507,7 @@ section.active {
     background-color: rgba(0, 0, 0, 0.5); /* 你的主色調 */
     color: #fff;}
 
-/* 手機版 RWD：圖片在上方，固定卡片高度，圖片占滿上方 */
+/* 手機版 RWD：圖片在上方，與首頁 banner 統一使用 16:9。 */
 @media (max-width: 767.98px) {
     .section-experience .experience-card {
         flex-direction: column;
@@ -352,9 +519,11 @@ section.active {
     }
 
     .section-experience .experience-image {
-        min-width: 100%;
-        /* height: 60%; */ /* 移除高度百分比，讓它根據 aspect-ratio 或內容決定 */
-        padding-top: 40%; /* 設置圖片區塊寬高比為 16:9 (100% / (16/9) = 56.25%) */
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
         position: relative;
         overflow: hidden;
         background: #eee; /* 如果圖片載入失敗，顯示背景色 */
