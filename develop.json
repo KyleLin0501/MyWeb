@@ -34,5 +34,14 @@
     "title": "iOS App 登場時刻 官方網站<br>開發者",
     "date": "2025 年 10 月 - 2025 年 12 月",
     "description": "獨立開發一個競賽報名平台，實際運行於 iOS Club 之社團競賽"
+  },
+  {
+    "href": "https://testflight.apple.com/join/mS8Pcvxg",
+    "ariaLabel": "NCKU 工具",
+    "imageSrc": "static/img/NCKU_APP_Logo.png",
+    "imageAlt": "NCKU 工具（非官方）",
+    "title": "NCKU 工具（非官方）<br>開發者",
+    "date": "2026 年 9 月 - now",
+    "description": "獨立開發一款校園課務及校務系統（非官方開發）"
   }
 ]
