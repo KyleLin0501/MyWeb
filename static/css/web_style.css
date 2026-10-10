@@ -264,9 +264,17 @@ section.active {
     z-index: 2;
 }
 
-.section-index .carousel-item img {
+.section-index .carousel-image {
     width: 100%;
     height: calc(100% - 96px);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.section-index .carousel-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* 確保圖片填滿，不會變形 */
     object-position: center; /* 確保人像或重點保持在中間 */
 }
@@ -343,10 +351,15 @@ section.active {
         min-width: 0;
         height: auto;
     }
-    .section-index .carousel-item img {
+    .section-index .carousel-image {
         flex: none;
         height: auto;
         aspect-ratio: 16 / 9;
+        position: relative;
+    }
+    .section-index .carousel-image img {
+        position: absolute;
+        inset: 0;
     }
     .section-index .carousel-info {
         height: auto;
@@ -453,6 +466,21 @@ section.active {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* 照片在原相框內平滑放大，觸控與減少動態效果模式維持原樣。 */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .section-index .carousel-image img,
+    .section-experience .experience-image img {
+        transform: scale(1);
+        transform-origin: center;
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .section-index .carousel-image:hover img,
+    .section-experience .experience-image:hover img {
+        transform: scale(1.08);
+    }
 }
 
 /* 內容區塊 */

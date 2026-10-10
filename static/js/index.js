@@ -32,7 +32,9 @@ async function initCarousel() {
 
             return `
                 <a ${linkAttributes} class="carousel-item" data-index="${index}">
-                    <img src="${item.imageSrc}" alt="${item.imageAlt}">
+                    <div class="carousel-image">
+                        <img src="${item.imageSrc}" alt="${item.imageAlt}">
+                    </div>
                     <div class="carousel-info">
                         <h4>${item.title}</h4>
                         <p class="muted">${item.date}</p>
